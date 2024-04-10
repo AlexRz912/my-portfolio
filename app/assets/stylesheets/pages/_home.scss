@@ -1,9 +1,101 @@
-// Specific CSS for your home-page
-
-.titles-black {
+.titles-bold {
   font-weight: 900;
   opacity: $opacity;
 }
 .text-opacity {
   opacity: $opacity;
+}
+
+.title-size {
+  font-size: 120px;
+}
+
+.subtitle-size {
+  font-size: 40px;
+}
+
+.smiley-position {
+  position:relative;
+  top:-10px;
+}
+
+.subtitle-position {
+  padding: 0 4px;
+  position:relative;
+  top:-20px;
+}
+
+.title-position {
+  position:relative;
+  top:-40px;
+}
+
+.button-position {
+  position:relative;
+  top:120px;
+}
+h1 {
+  margin: 0;
+}
+
+
+@media all and (max-width: 780px) {
+
+  .container-disable {
+    padding: 0;
+  }
+  .subtitle-size {
+    font-size: 30px;
+  }
+
+  .subtitle-position {
+    top:-20px;
+  }
+
+  .portfolio-title-size-phone {
+    font-size: 100px;
+  }
+
+  .button-position {
+    top: 200px;
+  }
+
+}
+
+@media all and (max-width: 620px) {
+  .container-disable {
+    padding: 0 20px;
+  }
+  .title-size {
+    font-size: 80px;
+  }
+  .subtitle-size {
+    font-size: 30px;
+  }
+
+  .subtitle-position {
+    padding: 0 2px;
+    top:0px;
+  }
+  .subtitle-position-phone {
+    position: relative;
+    top: 140px;
+  }
+
+  .portfolio-title-size-phone {
+    font-size: 72px;
+  }
+
+  .linewrap-toggle {
+    display: none;
+  }
+
+  .title-position {
+    position:relative;
+    top: 260px;
+  }
+
+  .button-position {
+    top:310px;
+  }
 }
