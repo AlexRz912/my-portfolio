@@ -49,6 +49,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
+gem 'animate-css-rails', '~> 3.5', '>= 3.5.2'
 
 group :development, :test do
   gem "dotenv-rails"
