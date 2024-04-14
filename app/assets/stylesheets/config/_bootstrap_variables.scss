@@ -7,8 +7,8 @@
 // General style
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
-$font-size-base:         1rem;
+$body-bg:                $light-blue;
+$font-size-base:         5rem;
 
 // Colors
 $body-color: $gray;
@@ -23,4 +23,10 @@ $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
-// Override other variables below!
+// Override other variables below
+$h2-font-size: $font-size-base * 1;
+$h5-font-size: $font-size-base * 0.2;
+$h6-font-size: $font-size-base * 0.5;
+
+//custom opacity
+$opacity: 50%;
