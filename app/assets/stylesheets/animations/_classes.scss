@@ -1,0 +1,33 @@
+.fade-in {
+  animation : fadeIn 8s;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 2s;
+}
+
+.fade-in-left-second {
+  animation: fadeInLeftSecond 5s;
+}
+
+.first-subtitle-fade-in-up {
+  animation: fadeInUp 3s;
+}
+
+.second-subtitle-fade-in-up {
+  animation: fadeInUp 4s;
+}
+
+.background-fade-in-right {
+  animation: backgroundFadeInRight 2s;
+}
+
+.button-fade-out-down {
+  animation: buttonFadeOutDown 1.5s;
+}
+
+.homepage-texts-fade-out-left {
+  transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+  animation: homepageTextsFadeOutLeft 1.5s;
+}
