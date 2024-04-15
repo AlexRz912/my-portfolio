@@ -9,6 +9,12 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "animations/keyframes";
+@import "animations/classes";
 @import "components/index";
 @import "pages/index";
 @import "config/modifiers";
+
+body {
+  overflow: hidden;
+}

@@ -1,11 +1,11 @@
-<div class="body-easein fadeOut"></div>
-<div class="container pt-5 container-disable">
+<div class="body-easein fade-out"></div>
 
-  <div class="mb-5">
-    <div class="d-flex fadeInLeft">
+<div data-controller="toggle-animation" class="container pt-5 container-disable">
+  <div data-toggle-animation-target="backgroundEaseInRight"class="body-easeout"></div>
+  <div data-toggle-animation-target="homepageText" class="mb-5">
+    <div class="d-flex fade-in-left">
       <h1 class="titles-bold hello-title-color title-size">Hello </h1>
       <h1 class="title-size smiley-position">👋</h1>
-
     </div>
 
     <div class="subtitle-position">
@@ -21,9 +21,8 @@
       <h1 class="titles-bold portfolio-title-color title-size portfolio-title-size-phone">Portfolio </h1>
       <h1 class="title-size portfolio-title-size-phone">🙂</h1>
     </div>
-
   </div>
-  <div class="d-flex justify-content-center fs-5 fade-in">
-    <a style="text-decoration: none;"href="" class="portfolio-title-color text-opacity button-position">See Projects</a>
+  <div class="d-flex justify-content-center fs-5 fade-in" data-toggle-animation-target="buttonText">
+    <p data-action="click->toggle-animation#addKeyframes" class="portfolio-title-color text-opacity button-position button-decoration"> See Projects </p>
   </div>
 </div>

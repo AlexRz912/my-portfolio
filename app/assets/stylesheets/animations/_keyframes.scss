@@ -1,0 +1,136 @@
+@keyframes fadeOut {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translate3d(-2%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeftSecond {
+  from {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+    transform: translate3d(-400px, 0, 0);
+
+  }
+
+  70% {
+    opacity: 0%;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundFadeInRight {
+  from {
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes buttonFadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes homepageTextsFadeOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+}
