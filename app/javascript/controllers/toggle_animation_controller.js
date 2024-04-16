@@ -12,15 +12,13 @@ export default class extends Controller {
   }
 
   transitionEndHandle() {
+    const request = new Request("https://www.mozilla.org/");
     this.backgroundEaseInRightTarget.addEventListener("animationend", () => {
-      fetch('/controller/action', {
-        method: 'POST',
-        headers: { //Comprendre ce qu'il se passe dans headers, reviser les cours sur l'ajax
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-        },
-        body: JSON.stringify({ transition_finished: "true" })
-      });
+      fetch(request,
+        {
+          method: "GET"
+        }
+      );
     });
   }
 }
