@@ -7,10 +7,21 @@ import { Controller } from "@hotwired/stimulus"
 */
 
 export default class extends Controller {
-  
-  colorClasses = ["hello-title-color", "pres-subtitle-color", "here-subtitle-color", "portfolio-title-color"];
+  static targets = ["texts"]; //Capter les div de
+
+
   connect() {
-    console.log("Hello");
+    
+
+    this.textsTargets.forEach((textGroup) => {
+      textGroup.style.opacity = "50%";
+      Array.from(textGroup.children).forEach((text) => {
+        text.classList.add(colorClasses[Math.floor(Math.random() * colorClasses.length)]); // Ajoutez votre classe à child
+      });
+    });
+
+
+    console.log(this.textsTargets);
   }
 
 

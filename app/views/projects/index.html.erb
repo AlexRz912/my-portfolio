@@ -1,10 +1,12 @@
 <div data-controller="word-cloud" class="">
   <% mock_data_list = @mock_data_list.each_slice(4).to_a %>
+
     <% mock_data_list.each do |elem| %>
-    <div class="fs-6 d-flex">
-      <% elem.each do |project| %>
-      <p style="margin: 0;"><%= project.upcase %> </p>
+      <div data-word-cloud-target="texts" class="fs-6 d-flex">
+        <% elem.each do |project| %>
+        <p style="margin: 0;"><%= project.upcase %> </p>
+      <% end %>
+      </div>
     <% end %>
-    </div>
-  <% end %>
+  </div>
 </div>
