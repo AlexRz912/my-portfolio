@@ -26,3 +26,19 @@
     <p data-action="click->toggle-animation#addKeyframes" class="portfolio-title-color text-opacity button-position button-decoration"> See Projects </p>
   </div>
 </div>
+
+<div data-controller="">
+  <div style="position: absolute; top: 0; right: 0; z-index: 0" class="d-flex justify-content-center align-items-center">
+    <div data-controller="word-cloud">
+      <% mock_data_list = @mock_data_list.each_slice(4).to_a %>
+      <% mock_data_list.each do |elem| %>
+        <div data-word-cloud-target="texts" class="fs-6 titles-bold d-flex">
+          <% elem.each do |project| %>
+            <p style="margin: 0;"><%= project.upcase %> </p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
