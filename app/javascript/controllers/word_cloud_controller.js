@@ -1,8 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["texts", "groupedTexts"];
-
+  static targets = ["texts"];
 
   connect() {
     this.handleProjects(this.textsTargets);
@@ -13,15 +12,14 @@ export default class extends Controller {
     target.forEach((textGroup) => {
       this.setColors(textGroup);
       this.setSizes(textGroup);
-      this.setOrientation(textGroup);
       this.getGeometry(textGroup);
       const textGroupSortedByWidth = this.sortByWidth(textGroup);
       this.setOpacity(textGroupSortedByWidth);
+      this.setAnimation(textGroup);
     });
   }
 
   setColors(textGroup) {
-    textGroup.style.opacity = "80%";
     let colorClasses = ["hello-title-color", "pres-subtitle-color", "here-subtitle-color", "portfolio-title-color"];
     Array.from(textGroup.children).forEach((text) => {
       let colorClass = colorClasses[Math.floor(Math.random() * colorClasses.length)];
@@ -36,15 +34,6 @@ export default class extends Controller {
       let fontSizeMultiplier = fontSizeMultiples[Math.floor(Math.random() * fontSizeMultiples.length)];
       text.style.fontSize = `${40 * fontSizeMultiplier}px`;
       fontSizeMultiples.splice(fontSizeMultiples.indexOf(fontSizeMultiplier), 1);
-    });
-  }
-
-  setOrientation(textGroup) {
-    Array.from(textGroup.children).forEach((text) => {
-      if (0 === Math.floor(Math.random() * 4)) {
-        text.style.transform = "rotate(90deg)";
-      }
-
     });
   }
 
@@ -69,14 +58,67 @@ export default class extends Controller {
 
   setOpacity(textGroup) {
     const opacityMap = {
-      3: 5,
-      2: 4,
-      1: 3,
-      0: 2
+      3: 10,//7
+      2: 8,//5
+      1: 6,//4
+      0: 4//3
     };
     textGroup.forEach((text, i) => {
-      console.log(opacityMap[i]);
       text.style.opacity = `${opacityMap[i]}%`;
     });
+  }
+
+  setAnimation(textGroup) {
+    Array.from(textGroup.children).forEach((text) => {
+
+        this.setAnimationUtils(text);
+    });
+  }
+
+  setAnimationUtils = (text) => {
+    let coinFlip = Math.floor(Math.random() * 2);
+    let newPosAddition = Math.random() * 1.5 + 0.5;
+    console.log(newPosAddition);
+    let initialOpacity = text.style.opacity;
+    // text.style.opacity = "0";
+
+      let movement = 0;
+      const intervalToClear = setInterval(() => {
+        if (coinFlip === 1) {
+          movement += newPosAddition;
+        } else {
+          movement -= newPosAddition;
+        }
+        text.style.position = "relative";
+        text.style.left = `${movement}px`;
+        if (!(this.isVisibleInViewportX(text))) {
+          clearInterval(intervalToClear);
+          text.style.left = "0px";
+          this.fadeIn(text, initialOpacity);
+          this.setAnimationUtils(text);
+        }
+      }, 33);
+
+    //event listener
+  }
+
+  isVisibleInViewportX(elem) {
+    let x = elem.offsetLeft;
+    let width = elem.offsetWidth;
+    let isVisible = ( x + width > ( window.scrollX ) && ( x < window.scrollX + window.innerWidth ));
+    return isVisible;
+  }
+
+  fadeIn = (text, initialOpacity) => {
+    const opacities = [
+      { opacity : "0"},
+      { opacity : `${initialOpacity}`}
+    ]
+
+    const fadeInConfig = {
+      duration: 1000,
+      iterations: 1
+    }
+    text.animate(opacities, fadeInConfig);
   }
 }
