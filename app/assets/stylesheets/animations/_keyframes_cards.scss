@@ -1,0 +1,29 @@
+@keyframes AppDescFadeIn {
+  from {
+    opacity: 0;
+    top: -15px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes cardBackgroundFadeIn {
+  from {
+    background-color: rgba(63, 63, 63, 0);
+  }
+
+  to {
+    background-color: rgba(63, 63, 63, 0.145);
+  }
+}
+
+.mobile-app-desc-fade-in {
+  animation: AppDescFadeIn 0.5s ease-out;
+}
+
+.card-background-fade-in {
+  animation: cardBackgroundFadeIn 0.5s ease-out;
+}

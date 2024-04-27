@@ -1,0 +1,72 @@
+.project-card {
+  width: 25vw;
+  height: 100vh;
+  background-color: #00000000;
+  transition: 0.2s ease-out;
+  border: none;
+}
+
+.card-greenish:hover {
+  background-color: rgba(14, 103, 33, 0.252)//Créer une variable pour la couleur greenish
+}
+
+.card-lightblue:hover {
+  background-color: rgba(14, 100, 103, 0.252)//Créer une variable pour la couleur greenish
+}
+
+.card-blue:hover {
+  background-color: rgba(14, 32, 103, 0.252);
+}
+
+.card-purple:hover {
+  background-color: rgba(84, 14, 103, 0.252);
+}
+.project-card:hover .text-hidden { //display block a mettre dans card_hover_animations
+  display: block !important;
+}
+
+.project-card-pc {
+  width:25vw;
+  height: 100vh;
+  background-color: #00000000;
+  border: none;
+}
+
+.project-card-pc:hover {
+  background-color: #4f4f4f2c;
+  transition: 0.2s ease-out;
+}
+.project-card-pc:hover .text-hidden { //display block a mettre dans card_hover_animations
+  display: block !important;
+
+}
+
+.text-hidden {
+  position: relative;
+}
+.name-size {
+  font-size: 40px;
+}
+
+.desc-size {
+  font-size: 14px;
+}
+
+@media all and (max-width: 1200px) {
+
+  .project-card-mobile {
+    width: 50vw;
+    height: 100vh;
+    background-color: #00000000;
+    transition: 0.2s ease-out;
+    border: none;
+  }
+
+  .project-card-pc {
+    width:50vw;
+    height: 100vh;
+    background-color: #00000000;
+    border: none;
+  }
+
+}

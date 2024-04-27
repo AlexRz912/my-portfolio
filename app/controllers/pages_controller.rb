@@ -2,29 +2,32 @@ class PagesController < ApplicationController
   def home
     # redirect_to projects_path if params[:transition_finished] == true
     @mock_data_list = [
-      "Podcasts",
-      "Blog",
-      "Vlog",
-      "Test",
+      "TDD",
       "Karma",
       "Pokemarket",
-      "Geocoding",
       "CodeWars",
-      "CodinGame",
-      "Geocoding",
       "AJAX",
       "Crud",
-      "Ruby",
+      "React",
       "RubyOnRails",
       "Restful",
       "API",
       "LeWagon",
-      "CSGO",
-      "COD",
-      "Jack Reacher",
-      "AZERTY",
       "Booki",
-      "Le jeu du serpent"
+      "Snake Game",
+      "TDD",
+      "Karma",
+      "Pokemarket",
+      "CodeWars",
+      "AJAX",
+      "Crud",
+      "React",
+      "RubyOnRails",
+      "Restful",
+      "API",
+      "TypeScript",
+      "Booki",
+      "Snake Game"
     ].shuffle
   end
 end

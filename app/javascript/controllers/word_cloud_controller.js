@@ -20,7 +20,7 @@ export default class extends Controller {
   }
 
   setColors(textGroup) {
-    let colorClasses = ["hello-title-color", "pres-subtitle-color", "here-subtitle-color", "portfolio-title-color"];
+    let colorClasses = ["text-greenish", "text-blue", "text-lightblue", "text-purple"];
     Array.from(textGroup.children).forEach((text) => {
       let colorClass = colorClasses[Math.floor(Math.random() * colorClasses.length)];
       text.classList.add(colorClass);
@@ -78,7 +78,7 @@ export default class extends Controller {
   setAnimationUtils = (text) => {
     let coinFlip = Math.floor(Math.random() * 2);
     let newPosAddition = Math.random() * 1.5 + 0.5;
-    console.log(newPosAddition);
+
     let initialOpacity = text.style.opacity;
     // text.style.opacity = "0";
 

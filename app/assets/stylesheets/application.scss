@@ -11,6 +11,7 @@
 // Your CSS partials
 @import "animations/keyframes";
 @import "animations/keyframes_cloud";
+@import "animations/keyframes_cards";
 @import "animations/classes";
 @import "components/index";
 @import "pages/index";
@@ -18,4 +19,8 @@
 
 body {
   overflow: hidden;
+}
+
+.paragraph-nomargin p {
+  margin: 0;
 }
