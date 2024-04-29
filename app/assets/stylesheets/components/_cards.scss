@@ -25,22 +25,6 @@
   display: block !important;
 }
 
-.project-card-pc {
-  width:25vw;
-  height: 100vh;
-  background-color: #00000000;
-  border: none;
-}
-
-.project-card-pc:hover {
-  background-color: #4f4f4f2c;
-  transition: 0.2s ease-out;
-}
-.project-card-pc:hover .text-hidden { //display block a mettre dans card_hover_animations
-  display: block !important;
-
-}
-
 .text-hidden {
   position: relative;
 }
@@ -54,18 +38,11 @@
 
 @media all and (max-width: 1200px) {
 
-  .project-card-mobile {
+  .project-card {
     width: 50vw;
-    height: 100vh;
+    height: 50vh;
     background-color: #00000000;
     transition: 0.2s ease-out;
-    border: none;
-  }
-
-  .project-card-pc {
-    width:50vw;
-    height: 100vh;
-    background-color: #00000000;
     border: none;
   }
 
