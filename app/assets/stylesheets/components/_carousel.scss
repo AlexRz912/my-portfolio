@@ -1,0 +1,31 @@
+.carousel {
+  padding-top: 75%;
+
+}
+
+.carousel-viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  /* POURQUOI LE RESET SE FAIT LA DEDANS??? */
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-slide { /* chacune des images du projet en carousel-slide */
+  position: relative;
+  flex: 0 0 100%; /* Voir l'utilité de flex dans le contexte avec les images du projets */
+  width: 100%;
+  background-color: #f99;
+}
+
+.carousel__snapper {
+  scroll-snap-align: center;
+}
+
+.carousel-navigation-button {
+
+}
